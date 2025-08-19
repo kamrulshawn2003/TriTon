@@ -80,8 +80,6 @@ body {
 
 .logo-img {
   max-height: 50px;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 
@@ -403,3 +401,4 @@ body {
   font-size: 0.8rem;
   margin-top: 1rem;
 }
+
