@@ -1,0 +1,235 @@
+/* About Page Specific Styles */
+
+/* About Hero Section */
+.about-hero {
+  position: relative;
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('pic/about-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 3.5rem;
+  color: #f04e23;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  margin-bottom: 0;
+}
+
+/* Story Section */
+.story-section {
+  background-color: #111;
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #f04e23;
+  margin-bottom: 1.5rem;
+}
+
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #bbb;
+}
+
+.story-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Mission Section */
+.mission-section {
+  background-color: #0a0a0a;
+  padding: 5rem 0;
+}
+
+.mission-card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+}
+
+.mission-icon {
+  font-size: 3rem;
+  color: #f04e23;
+  margin-bottom: 1rem;
+}
+
+.mission-card h3 {
+  color: #f04e23;
+  margin-bottom: 1rem;
+}
+
+.mission-card p {
+  color: #bbb;
+  line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+  background-color: #111;
+  padding: 5rem 0;
+}
+
+.team-member {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #f04e23;
+}
+
+.team-member h4 {
+  color: #f04e23;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  color: #bbb;
+  margin-bottom: 0.5rem;
+}
+
+/* Services Deep Dive */
+.services-deep-section {
+  background-color: #0a0a0a;
+  padding: 5rem 0;
+}
+
+.service-item-deep {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.service-icon-deep {
+  font-size: 3rem;
+  color: #f04e23;
+  margin-bottom: 1rem;
+}
+
+.service-item-deep h4 {
+  color: #f04e23;
+  margin-bottom: 1rem;
+}
+
+.service-item-deep p {
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  color: #bbb;
+}
+
+.service-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Stats Section */
+.stats-section-about {
+  background-color: #f04e23;
+  padding: 5rem 0;
+}
+
+.stat-item-about {
+  text-align: center;
+}
+
+.stat-number-about {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label-about {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* CTA Section */
+.cta-section-about {
+  background-color: #f04e23;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.cta-title-about {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cta-subtitle-about {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .mission-card {
+    margin-bottom: 2rem;
+  }
+  
+  .team-member {
+    margin-bottom: 2rem;
+  }
+}
