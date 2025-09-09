@@ -1,0 +1,389 @@
+/* Location Page Specific Styles */
+
+/* Location Hero Section */
+.location-hero {
+  position: relative;
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+              url('pic/location-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.location-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(240, 78, 35, 0.1);
+  z-index: 1;
+}
+
+/* Locations Section */
+.locations-section {
+  background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
+  padding: 6rem 0;
+  position: relative;
+}
+
+.locations-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(240, 78, 35, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(240, 78, 35, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.location-card {
+  background: linear-gradient(145deg, #1a1a1a 0%, #222 100%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(240, 78, 35, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.location-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(240, 78, 35, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.location-card:hover::before {
+  left: 100%;
+}
+
+.location-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(240, 78, 35, 0.2);
+  border-color: rgba(240, 78, 35, 0.4);
+}
+
+.location-title {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 2.2rem;
+  color: #f04e23;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.location-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #f04e23, transparent);
+  border-radius: 2px;
+}
+
+.location-details {
+  color: #bbb;
+}
+
+.location-address,
+.location-phone,
+.location-hours {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+}
+
+.location-address i,
+.location-phone i,
+.location-hours i {
+  color: #f04e23;
+  margin-right: 12px;
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.location-address {
+  background: rgba(240, 78, 35, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 3px solid #f04e23;
+}
+
+.location-phone {
+  background: rgba(240, 78, 35, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 3px solid #f04e23;
+}
+
+.location-hours {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Map Section */
+.map-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.map-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f04e23, transparent);
+}
+
+.map-placeholder {
+  background: linear-gradient(145deg, #1a1a1a 0%, #222 100%);
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  border: 2px solid rgba(240, 78, 35, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.map-placeholder::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(240, 78, 35, 0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.map-icon {
+  font-size: 4rem;
+  color: #f04e23;
+  margin-bottom: 1rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.map-placeholder p {
+  color: #bbb;
+  font-size: 1.2rem;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Stats Section for Locations */
+.location-stats {
+  background: linear-gradient(135deg, #f04e23 0%, #d43a1f 100%);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.location-stat-item {
+  margin-bottom: 2rem;
+}
+
+.location-stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.location-stat-label {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Enhanced CTA Section */
+.location-cta {
+  background: linear-gradient(135deg, #f04e23 0%, #d43a1f 100%);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.location-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="50" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="50" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="90" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.1;
+}
+
+.location-cta-title {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.location-cta-subtitle {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+.location-cta .btn {
+  background: white;
+  color: #f04e23;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.location-cta .btn:hover {
+  background: #f8f9fa;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  color: #d43a1f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .location-hero {
+    height: 50vh;
+  }
+
+  .location-title {
+    font-size: 1.8rem;
+  }
+
+  .location-card {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .location-address,
+  .location-phone,
+  .location-hours {
+    font-size: 0.9rem;
+  }
+
+  .map-placeholder {
+    padding: 3rem 1.5rem;
+  }
+
+  .location-cta-title {
+    font-size: 2.2rem;
+  }
+
+  .location-cta-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .location-stat-number {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .location-card {
+    padding: 1.5rem;
+  }
+
+  .location-title {
+    font-size: 1.6rem;
+  }
+
+  .location-cta-title {
+    font-size: 1.8rem;
+  }
+
+  .location-cta .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animations */
+.location-card:nth-child(1) { animation-delay: 0.1s; }
+.location-card:nth-child(2) { animation-delay: 0.2s; }
+.location-card:nth-child(3) { animation-delay: 0.3s; }
+.location-card:nth-child(4) { animation-delay: 0.4s; }
+.location-card:nth-child(5) { animation-delay: 0.5s; }
